@@ -4,9 +4,21 @@ img{
     aspect-ratio: 1/1;
     object-fit: cover;
 }
+.card-text {
+    font-size: 16px;
+    line-height: 1.5;
+    height: 72px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box; 
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical; 
+}
 
-.card-text{
-    height: 70px;
+
+.card-title{
+    text-wrap: nowrap;
     overflow: hidden;  
     text-overflow: ellipsis;
+    cursor: help;
 }
