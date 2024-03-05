@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { OtroComponent } from './componentes/otro/otro.component';
 import { ErrorComponent } from './componentes/error/error.component';
-import { AcercaDEComponent } from './componentes/acerca-de/acerca-de.component';
+import { AcercaDEComponent } from './pages/acerca-de/acerca-de.component';
 import { LoginComponent } from './pages/Auth/login/login.component';
 import { RegisterComponent } from './pages/Auth/register/register.component';
 
