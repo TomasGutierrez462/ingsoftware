@@ -1,26 +1,41 @@
 import { Routes } from '@angular/router';
-import { InicioComponent } from './componentes/inicio/inicio.component';
-import { OtroComponent } from './componentes/otro/otro.component';
-import { ErrorComponent } from './componentes/error/error.component';
-import { AcercaDEComponent } from './pages/acerca-de/acerca-de.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { TeamPageComponent } from './pages/team-page/team-page.component';
 import { LoginComponent } from './pages/Auth/login/login.component';
 import { RegisterComponent } from './pages/Auth/register/register.component';
 import { CiclosDeVidaComponent } from './pages/ciclos-de-vida/ciclos-de-vida.component';
-import { SwebokComponent } from './pages/swebok/swebok.component';
 import { RequirementsComponent } from './pages/requirements/requirements.component';
-import { ScrumTeamComponent } from './pages/scrum-team/scrum-team.component';
+import { SwebokComponent } from './pages/swebok/swebok.component';
 
 export const routes: Routes = [
-    {path: "home", component:InicioComponent},
-    {path:"other", component:OtroComponent},
-    {path:"about", component:AcercaDEComponent},
-    {path:"lifecycle",component:CiclosDeVidaComponent},
-    {path:"login", component:LoginComponent},
-    {path:"signup", component:RegisterComponent},
-    {path:"swebok", component:SwebokComponent},
-    {path:"requeriments", component:RequirementsComponent},
-    {path:"scrum-team", component:ScrumTeamComponent},
-    {path:"",redirectTo:"home", pathMatch:"full"},
-    {path:"**",component:ErrorComponent}
+    //general routes
+    {
+        path: 'home', component: HomeComponent
+    },
+    {
+        path: 'about', component: AboutPageComponent
+    },
+    { path: "login", component: LoginComponent },
+    { path: "register", component: RegisterComponent },
+    { path: "lifecycle", component: CiclosDeVidaComponent },
+
+    // dropdown menu routes
+    { path: "requeriments", component: RequirementsComponent },
+    {
+        path: 'scrum-team', component: TeamPageComponent
+    },
+    {
+        path: 'swebok', component: SwebokComponent
+    },
+
+    // default redirect
+    { path: "", redirectTo: "home", pathMatch: "full" },
     
+    // 404 page
+    {
+        path: '**', component: NotFoundComponent
+    },
+
 ];
