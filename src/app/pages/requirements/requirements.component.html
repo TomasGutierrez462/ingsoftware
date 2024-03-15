@@ -27,13 +27,17 @@
 					<h3>Desarrollo de la Base de Datos</h3>
 					<ul>
 						<li>
-							Crear una tabla para registros de usuarios con
-							campos: nombre, apellido, número de cédula y fecha
-							de nacimiento. La fecha de nacimiento debe ser almenos de 18 años, menor a la fecha actual. 
+							Crear una tabla para almacenar usuarios que van a
+							poder reservar salas.
 						</li>
 						<li>
-							Implementar soporte para varios formatos de número
-							de cédula.
+							Tener tablas para poder almacenar salas que van a
+							poder reservar los usuarios, y permitir tener un
+							estado para saber el estado de disponibilidad de una
+							sala.
+						</li>
+						<li>
+							Cada sala puede tener varias imagenes.
 						</li>
 						<li>
 							Desarrollar una tabla para gestionar los roles de
@@ -45,9 +49,12 @@
 							sillas y ubicación.
 						</li>
 						<li>
-							Crear una tabla para las reservaciones con claves
-							foráneas para el ID de usuario, ID de sala, fecha y
-							hora de inicio y fin de la reserva.
+							Crear una tabla para las reservaciones para tener un
+							registro de las mismas.
+						</li>
+						<li>
+							Implementar soporte para varios formatos de número
+							de cédula.
 						</li>
 					</ul>
 				</li>
@@ -55,23 +62,47 @@
 					<h3>Desarrollo de la Página Web</h3>
 					<ul>
 						<li>
-							Utilizar Node.js como entorno principal de
-							ejecución.
+							En la pagina debe haber una seccion de registro para
+							que un usuario pueda crear una cuenta para poder
+							interactuar con la pagina.
 						</li>
 						<li>
-							Implementar el framework Angular para el desarrollo
-							del frontend.
+							La pagina debe tener un apartado para que el usuario
+							inicie sesion con sus credenciales.
 						</li>
 						<li>
-							Utilizar TypeScript, CSS y HTML en el desarrollo.
+							Debe haber una seccion para que el usuario pueda
+							reservar una sala.
+						</li>
+						<li>
+							En la pagina un usuario puede reservar una sala por
+							su cuenta (para si mismo) o algun administrador
+							puede hacer la reserva (para cualquier usuario).
+						</li>
+						<li>
+							Debe haber una seccion para ver las salas
+							disponibles.
+						</li>
+						<li>
+							La pagina debe tener un apartado donde se vea la
+							información acerda de los desarrolladores.
+						</li>
+						<li>
+							En la pagina se debe poder ver 5 estilos de vida en
+							software.
+						</li>
+						<li>
+							La página deberá contar con una sección donde sea
+							posible visualizar cada área de conocimiento en el
+							SWEBOK.
+						</li>
+						<li>
+							Desde la pagina se debe poder ver como esta
+							conformado el equipo Scrum.
 						</li>
 						<li>
 							Diseñar una interfaz web intuitiva para docentes de
 							diferentes edades y personal del edificio.
-						</li>
-						<li>
-							Dividir el proyecto en frontend y backend para una
-							gestión eficiente.
 						</li>
 						<li>
 							Asegurar una interacción fluida entre el usuario y
