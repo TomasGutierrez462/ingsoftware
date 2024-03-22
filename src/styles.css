@@ -8,6 +8,17 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+ 
+ .hidden{
+     display: none;
+ }
+
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Cascadia Code', sans-serif;
+ }
 
 .container.custom-container {
     min-height: calc(100vh - 402px);
@@ -37,7 +48,6 @@
     padding: 10px 15px;
     background-color: #00bbf0;
     color: #ffffff;
-    border-radius: 0;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     border: none;
@@ -75,6 +85,7 @@ body {
 
 main {
     display: block;
+    height: 93%;
 }
 
 /**
@@ -110,7 +121,7 @@ hr {
    */
 
 pre {
-    font-family: monospace, monospace;
+    font-family: monospace;
     /* 1 */
     font-size: 1em;
     /* 2 */
@@ -158,7 +169,7 @@ strong {
 code,
 kbd,
 samp {
-    font-family: monospace, monospace;
+    font-family: monospace;
     /* 1 */
     font-size: 1em;
     /* 2 */
@@ -423,25 +434,13 @@ template {
     display: none;
 }
 
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 html,
 body,
 .app {
     display: block;
-    font-family: "Cascadia Code";
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
-}
-
-main {
-    height: 93%;
 }
 
 .layout_padding {

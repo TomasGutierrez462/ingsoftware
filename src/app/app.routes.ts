@@ -8,6 +8,7 @@ import { RegisterComponent } from './pages/Auth/register/register.component';
 import { CiclosDeVidaComponent } from './pages/ciclos-de-vida/ciclos-de-vida.component';
 import { RequirementsComponent } from './pages/requirements/requirements.component';
 import { SwebokComponent } from './pages/swebok/swebok.component';
+import { DatabaseTablesComponent } from './pages/database-tables/database-tables.component';
 
 export const routes: Routes = [
     //general routes
@@ -28,6 +29,9 @@ export const routes: Routes = [
     },
     {
         path: 'swebok', component: SwebokComponent
+    },
+    {
+        path: 'database-tables', component: DatabaseTablesComponent
     },
 
     // default redirect

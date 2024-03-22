@@ -1,5 +1,5 @@
 <app-header></app-header>
-<div class="container py-5">
+<div class="container papper" id="requirements-container">
 	<h1 class="mb-4">
 		Proyecto de Ingeniería de Software: Sistema de Reserva de Salas
 	</h1>
@@ -24,37 +24,66 @@
 			<h2>Requisitos del Proyecto:</h2>
 			<ol>
 				<li>
-					<h3>Desarrollo de la Base de Datos</h3>
+					<h3>Desarrollo del backend</h3>
 					<ul>
+						<li>Usar como gestor de bases de datos PostgreSQL.</li>
 						<li>
-							Crear una tabla para almacenar usuarios que van a
-							poder reservar salas.
+							La aplicacion estara desarrollada con Express.js.
 						</li>
 						<li>
-							Tener tablas para poder almacenar salas que van a
-							poder reservar los usuarios, y permitir tener un
-							estado para saber el estado de disponibilidad de una
-							sala.
+							Crear una tabla para almacenar información de
+							usuarios que puedan reservar salas. Debe incluir
+							datos básicos como nombre, apellido, email,
+							contraseña y documento de identidad, que admita
+							varios formatos.
 						</li>
 						<li>
-							Cada sala puede tener varias imagenes.
+							Crear una tabla para almacenar detalles de las
+							salas, incluyendo descripción, capacidad y piso.
+							Además, se debe indicar si la sala está ocupada con
+							un campo booleano, inicializado en falso por
+							defecto. La capacidad y el piso deben ser valores
+							mayores que cero.
 						</li>
 						<li>
 							Desarrollar una tabla para gestionar los roles de
-							los usuarios al registrarse.
+							los usuarios. Al registrarse, con una columna para
+							especificar el rol, estableciendo "Docente" como
+							valor por defecto.
 						</li>
 						<li>
-							Establecer una tabla para la información de las
-							salas disponibles, incluyendo tamaño, número de
-							sillas y ubicación.
+							Diseñar una tabla para almacenar los estados de cada
+							sala, permitiendo especificar su estado.
 						</li>
 						<li>
-							Crear una tabla para las reservaciones para tener un
-							registro de las mismas.
+							Crear una tabla para almacenar enlaces a las
+							fotografías de las salas.
 						</li>
 						<li>
-							Implementar soporte para varios formatos de número
-							de cédula.
+							Crear una tabla para gestionar las reservaciones
+							realizadas por usuarios registradores y registrados,
+							incluyendo la fecha de inicio y fin de cada reserva.
+							Se debe indicar un estado para conocer la
+							disponibilidad de una sala. La fecha de inicio no
+							puede ser posterior a la fecha de fin.
+						</li>
+						<li>
+							La información de los usuarios debe guardarse
+							encriptada.
+						</li>
+						<li>
+							Todo debe estar pensado para ser manejado con
+							permisos mediante la tabla de roles.
+						</li>
+						<li>
+							Si una sala se encuentra en estado de reserva, no
+							debe ser posible hacer una reserva a la misma en el periodo de tiempo establecido en la reservación.
+						</li>
+						<li>
+							Si un usuario se ausenta a una sala que ha
+							reservado, obtiene una advertencia, si se llega a 3
+							advertencias para un usuario se le bloquea el acceso
+							a reservas por si mismo.
 						</li>
 					</ul>
 				</li>
@@ -62,60 +91,108 @@
 					<h3>Desarrollo de la Página Web</h3>
 					<ul>
 						<li>
-							En la pagina debe haber una seccion de registro para
-							que un usuario pueda crear una cuenta para poder
-							interactuar con la pagina.
+							La página debe ser accesible desde cualquier
+							navegador web.
 						</li>
 						<li>
-							La pagina debe tener un apartado para que el usuario
-							inicie sesion con sus credenciales.
+							Utilizar Node.js como entorno de trabajo y Angular
+							como framework.
 						</li>
 						<li>
-							Debe haber una seccion para que el usuario pueda
-							reservar una sala.
+							Emplear TypeScript en el desarrollo de la página
 						</li>
 						<li>
-							En la pagina un usuario puede reservar una sala por
-							su cuenta (para si mismo) o algun administrador
-							puede hacer la reserva (para cualquier usuario).
+							Utilizar Bootstrap para la creación de la página.
 						</li>
 						<li>
-							Debe haber una seccion para ver las salas
-							disponibles.
+							Incluir un menú de registro para nuevos usuarios,
+							capturando información básica que se almacenará en
+							la base de datos.
 						</li>
 						<li>
-							La pagina debe tener un apartado donde se vea la
-							información acerda de los desarrolladores.
+							Incorporar un menú desplegable con secciones para
+							Requerimientos, Equipo SCRUM y SWEBOK.
 						</li>
 						<li>
-							En la pagina se debe poder ver 5 estilos de vida en
-							software.
+							Implementar un apartado de inicio de sesión para que
+							los usuarios puedan acceder con sus credenciales,
+							verificándolas con la base de datos.
 						</li>
 						<li>
-							La página deberá contar con una sección donde sea
-							posible visualizar cada área de conocimiento en el
-							SWEBOK.
-						</li>
-						<li>
-							Desde la pagina se debe poder ver como esta
-							conformado el equipo Scrum.
+							Permitir a los usuarios reservar salas, ya sea para
+							sí mismos o para otros usuarios por parte de
+							administradores.
 						</li>
 						<li>
 							Diseñar una interfaz web intuitiva para docentes de
 							diferentes edades y personal del edificio.
 						</li>
 						<li>
-							Asegurar una interacción fluida entre el usuario y
+							Incluir un apartado que presente información sobre
+							los desarrolladores del sitio.
+						</li>
+						<li>
+							Exhibir el ciclo de vida del software en la página.
+						</li>
+						<li>
+							Contar con una sección para visualizar cada área de
+							conocimiento en el SWEBOK.
+						</li>
+						<li>
+							Incorporar una sección para ver los requerimientos
+							del proyecto.
+						</li>
+						<li>
+							Desarrollar un menú de registro para usuarios
+							nuevos, donde se registre con información basica la
+							cual se almacenara en la base de datos.
+						</li>
+						<li>
+							Desarrollar un apartado de inicio de seción para
+							verificar las credenciales de cada usuario.
+						</li>
+						<li>
+							Mostrar la estructura del equipo SCRUM desde la
+							página.
+						</li>
+						<li>
+							Desarrollar una sección para mostrar las salas
+							disponibles.
+						</li>
+						<li>
+							Garantizar una interacción fluida entre el usuario y
 							el sistema de reservas.
 						</li>
-             <li>
-							Desarrollar un menú de registro para usuarios nuevos,
-               donde se registre con información basica la cual se almacenara en la base de datos.
+						<li>
+							Los usuarios con rol de administrador podran ver
+							toda la informacion.
 						</li>
-             <li>
-							Desarrollar un apartado de inicio de seción para verificar las credenciales de cada usuario.
+						<li>
+							El inicio de sesion para administradores estara
+							separado de los usuarios.
 						</li>
-            
+						<li>
+							Los usuarios con rol de administrador podran
+							modificar (actualizar, borrar, etc) toda la
+							informacion.
+						</li>
+						<li>
+							Los usuarios podran reservar una sala por un tiempo
+							determinado.
+						</li>
+						<li>
+							Los usuarios podran cancelar sus reservas.
+						</li>
+						<li>
+							Los usuarios podran ver el historial de sus
+							reservas.
+						</li>
+						<li>
+							Los usuarios podran revisar cuantas advertencias llevan.
+						</li>
+						<li>
+							Un usuario tiene un limite de reservas semanales de 3.
+						</li>
 					</ul>
 				</li>
 				<li>
@@ -140,28 +217,12 @@
 					<ul>
 						<li>
 							Integrar medidas de seguridad para proteger la
-							información de los usuarios.
+							información de los usuarios (encriptación,
+							autenticación, etc).
 						</li>
 						<li>
 							Implementar autenticación segura para acceder al
 							sistema.
-						</li>
-					</ul>
-				</li>
-				<li>
-					<h3>Pruebas y Validación</h3>
-					<ul>
-						<li>
-							Diseñar casos de prueba exhaustivos para cada
-							funcionalidad.
-						</li>
-						<li>
-							Realizar pruebas de usabilidad con usuarios
-							representativos.
-						</li>
-						<li>
-							Validar la funcionalidad del sistema en diferentes
-							escenarios.
 						</li>
 					</ul>
 				</li>
